@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mixo Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="body">
+    <div class="tab-head">
+        <div class="tab-head-inner flex-between">
+            <div class="tab-btns flex">
+                <button class="active">Library</button>
+                <button>Settings</button>
+                <button>Import</button>
+                <button>Export</button>
+                <button>Tools</button>
+            </div>
+
+            <div class="tab-input">
+                <input type="range" name="" id="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar  -->
+    <div class="main-body">
+        <div class="sidebar">
+            <div class="sidebar-innner">
+                <div class="sidebar-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="search-music" id="" placeholder="Search...Electro 120-126 BPM"/>
+                </div>
+
+                <div class="list">
+                    <div>
+                        <div class="list-head flex">
+                            <h4>
+                                Queue
+                            </h4>
+                        </div>
+
+                        <div class="list-inner">
+
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="list-head flex">
+                            <h4>
+                                All Tracks [2514]
+                            </h4>
+                        </div>
+
+                        <div class="list-inner"></div>
+                    </div>
+                    
+                    <div class="play-head">
+                        <div class="list-head lh-active flex-between">
+                            <h4>Playlist</h4> 
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                        <div class="list-inner">
+                            <div class="li-inner">
+                                <div class="list-inner-head flex">
+                                    <h5 class="">Acapellas (32)</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="li-inner">
+                                <div class="list-inner-head flex lih-active">
+                                    <h5 class="flex">
+                                        <i class="fa-solid fa-caret-right play"></i>
+                                        <i class="fa-solid fa-folder-closed"></i>
+                                        Deep House
+                                    </h5>
+                                    
+                                </div>
+
+                                <ul>
+                                    <li>Drum and Bass 162-174 BPM (31)</li>
+                                    <li>Drum and Bass 174 -180 BPM (32)</li>
+                                    <li>EDM 123-128 BPM (30)</li>
+                                    <li>EDM 128-160 BPM (31)</li>
+                                    <li class="li-active flex-between">
+                                        Electro 120-126 BPM (26)
+                                        <i class="fa-solid fa-wave-square"></i>
+                                    </li>
+                                    <li>Electro 120-128 BPM (28)</li>
+                                    <li>Funky / Disco (16)</li>
+                                    <li>Garage 120-126 BPM (55)</li>
+                                    <li>Garage 127-130 BPM (37)</li>
+                                    <li>Garage 130+ BPM (46)</li>
+                                    <li>Garage / Grime / Bassline (30)</li>
+                                    <li>House 108 -124 BPM (55)</li>
+                                    <li>House 124 & 125 BPM (50)</li>
+                                    <li>House 125 & 126 BPM (48)</li>
+                                    <li>House 126 - 128 BPM (49)</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Top Player  Structure-->
+        <div class="main-page">
+            <div class="main-page-inner">
+                <div class="mp-top">
+                    <div class="mp-top-left flex">
+                        <div class="music-art">
+                            <img class="music-art-image" src="" alt="">
+                        </div>
+
+                        <div class="mpt-controls">
+                            <div class="music-info">
+                                <h4>Hollaback Girl (Remix) (Jnr X Chuckie Retanium & Deen West Mashup)</h4>
+                                <h5 class="artist-name">Gwen Stefani</h5>
+                            </div>
+
+                            <div class="flex control-btns">
+                                <div class="cb-left">
+                                    <button><i class="fa-solid fa-backward-step"></i></button>
+                                    <button class="btn-active"><i class="fa-solid fa-pause"></i></button>
+                                    <button><i class="fa-solid fa-forward-step"></i></button>
+                                    <button><i class="fa-solid fa-shuffle"></i></button>
+                                </div>
+
+                                <div>
+                                    <button><i class="fa-solid fa-info"></i></button>
+                                    <button><i class="fa-regular fa-circle-xmark"></i></button>
+                                    <select name="" id="">
+                                        <option disabled value="Default">Default</option>
+                                        <option value="Default">Default</option>
+                                    </select>
+                                    <button><i class="fa-solid fa-caret-left"></i></button>
+                                    <button>4</button>
+                                    <button><i class="fa-solid fa-caret-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mp-top-right">
+                        <div class="tp-inner flex-col">
+                            <div class="tpi-top flex">
+                                <button>1248BPM</button>
+                                <button></button>
+                                <button>2021</button>
+                                <button>Electro</button>
+                            </div>
+                            
+                            <div class="tpi-bottom flex">
+                                <button>320kbps</button>
+                                <button>MPEG</button>
+                                <button class="flex star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mp-graphics">
+                    <div class="mp-graphics-inner flex-col">
+                        <div class="mpg-right flex">
+                            <button class="flex-center"><i class="fa-solid fa-circle-minus"></i></button>
+                            <button class="flex-center"><i class="fa-solid fa-circle-plus"></i></button>  
+                        </div>
+
+                        <div class="wave">
+                            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDl5aXFhNGRrYWhxZjFndzBkcGJqbmo5emI2azJ4MDRpNGVnZWpnaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ToMjGpJctqrZgKzX0wE/giphy.gif" alt="">
+                        </div>
+
+                        <div class="mpg-buttom flex-between">
+                            <h6>1:22</h6>
+                            <h6>3:13</h6>
+                        </div>
+                    </div>
+
+                    <div class="mp-cues">
+                        <div class="mp-cues-inner flex">
+                            <div class="cue1 cue-outer flex">
+                                <div class="cue cue-red"></div>
+                                <h6>cue1</h6>
+                            </div>
+
+                            <div class="cue2 cue-outer flex">
+                                <div class="cue cue-orange"></div>
+                                <h6>cue2</h6>
+                            </div>
+
+                            <div class="cue3 cue-outer flex">
+                                <div class="cue cue-blue"></div>
+                                <h6>cue3</h6>
+                            </div>
+
+                            <div class="cue4 cue-outer flex">
+                                <div class="cue cue-yellow"></div>
+                                <h6>cue4</h6>
+                            </div>
+
+                            <div class="cue5 cue-outer flex">
+                                <div class="cue cue-green"></div>
+                                <h6>cue5</h6>
+                            </div>
+
+                            <div class="cue6 cue-outer flex">
+                                <div class="cue cue-lilac"></div>
+                                <h6>cue6</h6>
+                            </div>
+
+                            <div class="cue7 cue-outer flex">
+                                <div class="cue cue-cyan"></div>
+                                <h6>cue7</h6>
+                            </div>
+
+                            <div class="cue8 cue-outer flex">
+                                <div class="cue cue-purple"></div>
+                                <h6>cue8</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cues-select-outer">
+                    <div class="cues-select flex">
+                        <div class="cue-select-container">
+                            <select name="" id="">
+                                <option value="CUE1">Cues</option>
+                                <option value="CUE1">CUE1</option>
+                                <option value="CUE1">CUE1</option>
+                                <option value="CUE1">CUE1</option>
+                                <option value="CUE1">CUE1</option>
+                                <option value="CUE1">CUE1</option>
+                            </select>
+                        </div>
+                        
+
+                        <div class="cues-container flex">
+                            <div class="cues-box cb1">
+                                <h5>CUE 1</h5>
+                                <h6>0:00</h6>
+                            </div>
+
+                            <div class="cues-box cb2">
+                                <h5>CUE 2</h5>
+                                <h6>0:31</h6>
+                            </div>
+
+                            <div class="cues-box cb3">
+                                <h5>CUE 3</h5>
+                                <h6>0:46</h6>
+                            </div>
+
+                            <div class="cues-box cb4">
+                                <h5>CUE 4</h5>
+                                <h6>1:17</h6>
+                            </div>
+
+                            <div class="cues-box cb5">
+                                <h5>CUE 5</h5>
+                                <h6>1:32</h6>
+                            </div>
+
+                            <div class="cues-box cb6">
+                                <h5>CUE 6</h5>
+                                <h6>1:48</h6>
+                            </div>
+
+                            <div class="cues-box cb7">
+                                <h5>CUE 7</h5>
+                                <h6>2:03</h6>
+                            </div>
+
+                            <div class="cues-box cb8">
+                                <h5>CUE 8</h5>
+                                <h6>2:34</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="song-lists">
+                    <div class="song-list-inner">
+                        <table class="music-table">
+                            <thead>
+                              <tr>
+                                <th class="table-checkbox"><input type="checkbox" name="" id="" class="head-check"></th>
+                                <th class="table-arrow flex-center"># <i class="fa-solid fa-chevron-up"></i></th>
+                                <th class="table-art">Art</th>
+                                <th class="table-added">Added</th>
+                                <th class="table-title">Title</th>
+                                <th class="table-artist">Artist</th>
+                                <th class="table-album">Album</th>
+                                <th class="table-rating">Rating</th>
+                                <th class="table-genre">Genre</th>
+                                <th class="table-kind">Kind</th>
+                                <th class="table-time">Time</th>
+                                <th class="table-track">Track#</th>
+                                <th class="table-year">Year</th>
+                                <th class="table-bpm">Bpm</th>
+                                <th class="table-comments">Comments</th>
+                                <th class="table-key">Key</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">1</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">2</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">3</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">4</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">5</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">6</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">7</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">8</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">9</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">10</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">11</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class="table-arrow">12</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
