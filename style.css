@@ -5,6 +5,7 @@
 --gray:rgb(36, 36, 54);
 --pink:pink;
 --white:#fff;
+--off-white-light:rgba(255, 255, 255, 0.74);
 --off-white:rgba(255, 255, 255, 0.219);
 --red:red;
 --green: green;
@@ -64,10 +65,11 @@ body{
     display: flex;
     flex-direction: column;
 }
-button, select{
+button, select, input[type="checkbox"]{
     cursor: pointer;
     border: none;
     border: none;
+    font-family: 'Nunito';
 }
 
 /* head tab styling */
@@ -83,7 +85,7 @@ button, select{
     column-gap: .2rem;
 }
 .tab-btns button{
-    height:2.5rem;
+    height:2.3rem;
     width: 5rem;
     color: var(--white);
     border-bottom: 2px solid transparent;
@@ -96,34 +98,94 @@ button, select{
     border-bottom: 2px solid var(--pink);
 }
 
-.tab-input{
+.tab-input {
     width: fit-content;
 }
+
 /* Base styling for the input */
 .tab-input input[type="range"] {
     -webkit-appearance: none;
+    appearance: none; /* Standard property */
     width: 8rem;
     height: 8px;
     background: transparent;
     outline: none;
 }
   
-  /* The track (background line) */
+/* The track (background line) */
+/* WebKit (Chrome, Safari, newer versions of Opera) */
 .tab-input input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
     height: 8px;
     cursor: pointer;
     background: var(--light-gray);
+    border-radius: 0; /* Explicitly set to square */
 }
 
+/* Firefox */
+.tab-input input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: var(--light-gray);
+    border-radius: 0; /* Explicitly set to square */
+}
+
+/* Microsoft browsers */
+.tab-input input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: transparent; /* MS needs this transparent */
+    border-color: transparent;
+    color: transparent;
+}
+
+.tab-input input[type="range"]::-ms-fill-lower {
+    background: var(--light-gray);
+    border-radius: 0;
+}
+
+.tab-input input[type="range"]::-ms-fill-upper {
+    background: var(--light-gray);
+    border-radius: 0;
+}
+
+/* The thumb (slider handle) */
+/* WebKit */
 .tab-input input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 1.2rem;
     width: 1.2rem;
     background: var(--white);
     cursor: pointer;
-    margin-top: -6px;
+    margin-top: -6px; /* Centers the thumb on the track */
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    border-radius: 0; /* Make it square */
+    border: none; /* Remove default borders */
+}
+
+/* Firefox */
+.tab-input input[type="range"]::-moz-range-thumb {
+    height: 1.2rem;
+    width: 1.2rem;
+    background: var(--white);
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    border-radius: 0; /* Make it square */
+    border: none; /* Remove default borders */
+}
+
+/* Microsoft browsers */
+.tab-input input[type="range"]::-ms-thumb {
+    height: 1.2rem;
+    width: 1.2rem;
+    background: var(--white);
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    border-radius: 0; /* Make it square */
+    border: none; /* Remove default borders */
+    margin-top: 0; /* For MS browser alignment */
 }
 
 .tab-input input[type="range"]:focus {
@@ -143,16 +205,14 @@ button, select{
     width: 100%;
     color: var(--white);
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     position: relative;
 }
 .sidebar-input{
     position: relative;
-    width: 19.89%;
     background-color: var(--gray);
-    position: fixed;
     z-index: 10;
-    border-bottom: .1rem solid var(--darker-gray);
+    border-bottom: .15rem solid var(--darker-gray);
 }
 .sidebar-input i{
     position: absolute;
@@ -168,12 +228,16 @@ button, select{
     background-color: transparent;
     outline: none;
     border: none;
-    padding: 1px 4px 1px 1rem;
+    padding: 1px 4px 1px 2.5rem;
+    color: var(--white);
+    font-size: .875rem;
 }
 .sidebar-input input::placeholder{
-    padding-left: 1.7rem;
+    width: 100%;
     font-weight: 500;
-    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
 }
 
 
@@ -184,15 +248,21 @@ button, select{
     height: 2.7rem;
     background-color: var(--gray);
     padding: 0 .875rem;
+    cursor: pointer;
 }
 .list-head h4, .list-inner-head h5{
-    font-size: 1rem;
+    font-size: .875rem;
     font-weight: 500;
 }
 .list-head.lh-active{
     background-color: var(--darker-gray);
-    position: fixed;
-    width: 20%;
+}
+.list-head i{
+    color:var(--off-white-light);
+}
+.list-inner{
+    max-height: calc(100vh - 14rem);
+    overflow-y: auto;
 }
 .list-inner-head.lih-active{
     margin-left: -.5rem;
@@ -201,20 +271,26 @@ button, select{
     column-gap: .3rem;
 }
 .lih-active .play{
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 .lih-active i{
-    font-size: .875rem;
+    font-size: .75rem;
+}
+.list-no{
+    margin-left: .5rem;
+    color: var(--off-white-light);
 }
 
 .li-inner ul li{
     font-weight: 500;
     display: flex;
     align-items: center;
+    font-size: .875rem;
 }
 .play-head{
-    max-height: 81vh;
-    overflow: auto;
+    max-height: calc(100vh - 11.29rem);
+    height: 100%;
+    overflow-y: auto;
 }
 .li-inner ul .li-active{
     background-color: var(--dark-gray);
@@ -308,15 +384,49 @@ button, select{
     justify-self: flex-end;
 }
 
-.control-btns button, .control-btns select{
-    min-width: 1.875rem;
+.control-btns button, .control-btns .custom-select{
+    min-width: 2rem;
     height: 1.7rem;
     background: var(--dark-gray);
     color: var(--white);
     font-size: .8rem;
     font-weight: 500;
     /* margin: 0 .1rem; */
+    position: relative;
 }
+
+.custom-select select {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    font-size: .8rem;
+    padding: 0 1.5rem 0 .5rem;
+    color: var(--white);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-select::after {
+    --size: 0.3rem;
+    position: absolute;
+    content: "";
+    right: .5rem;
+    pointer-events: none;
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid var(--white);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.cb-right{
+    column-gap: .3rem;
+    height: 100%;
+}
+
+
 .cb-left .btn-active{
     color: var(--pink);
 }
@@ -482,7 +592,7 @@ button, select{
     column-gap: .35rem;
 }
 .cue-select-container, .cues-container{
-    height: 2.5rem;
+    height: 2.7rem;
     border-radius: 2px;
     overflow: hidden;
     padding: .23rem;
@@ -500,18 +610,44 @@ button, select{
 .cue-select-container{
     width: 7rem;
 }
-.cue-select-container select{
-    width: 100%;
+.cue-select {
+    min-width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    column-gap: .5rem;
-    padding: 0 .7rem;
-    font-size: .7rem;
-    color: var(--white);
     background-color: var(--dark-gray);
+    position: relative;
     border-radius: 2px;
 }
+
+.cue-select select{
+    font-size: .7rem;
+    color: var(--white);
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 1.5rem 0 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: relative;
+}
+.cue-select select option{
+    color: var(--dark-gray);
+}
+.cue-select::after {
+    --size: 0.4rem;
+    position: absolute;
+    content: "";
+    right: 1rem;
+    pointer-events: none;
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid var(--white);
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+
+
 .cues-container{
     column-gap: .45rem;
     background-color: var(--gray);
@@ -578,8 +714,11 @@ button, select{
 .song-lists{
     margin: .1rem 0;
 }
+.song-list-inner{
+    background-color: var(--gray);
+}
 .music-table {
-    width: 100%;
+    width: fit-content;
     border-collapse: collapse;
     background-color: var(--gray);
     color: #fff;
@@ -599,7 +738,7 @@ button, select{
 .music-table th:nth-child(1), .music-table th:nth-child(2){
     border-right: none;
 }  
-.music-table td {
+tbody td {
     padding: 8px 7px;
 }
 .music-table td:nth-child(3) {
@@ -625,7 +764,82 @@ td .fa-circle{
 }
 .table-checkbox input[type='checkbox']{
     opacity: 0.5;
+    border: 1px solid var(--white);
 }
+
+
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: .75rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color:transparent;
+    border: 2px solid var(--off-white);
+    border-radius: 3px;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: var(--off-white);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left:25%;
+    top: 2%;
+    width: .25rem;
+    height: .5rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+
+
+
+
 .flex-center .fa-chevron-up{
     margin-left: .2rem;
     font-size: .65rem;
@@ -648,16 +862,16 @@ td .fa-circle{
 .table-art{
     width:3rem;
     max-width:3rem;
-    overflow: hidden;
 }
 .table-art img{
     min-height: 2.5rem;
-    max-width: 100%;
+    width: 3rem;
+    max-width: 3rem;
     background-color: var(--darker-gray);
 }
 .table-added{
-    min-width: 3.5rem;
-    max-width: 3.5rem;
+    min-width: 3rem;
+    max-width: 3rem;
 }
 .table-title, .table-artist, .table-album, .table-comments{
     min-width: 7rem;
@@ -676,15 +890,17 @@ td .fa-circle{
     max-width: 4rem;
 }
 
-/* table {
+table {
   display: flex;
   flex-direction: column;
-} */
+  justify-content: start;
+  align-items: flex-start;
+}
 
 thead {
   display: table;
   width: 100%;
-  /* table-layout: fixed; */
+  table-layout: fixed;
 }
 
 tbody {

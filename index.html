@@ -51,7 +51,7 @@
                     <div>
                         <div class="list-head flex">
                             <h4>
-                                All Tracks [2514]
+                                All Tracks<span class="list-no">[2514]</span> 
                             </h4>
                         </div>
 
@@ -67,7 +67,7 @@
                         <div class="list-inner">
                             <div class="li-inner">
                                 <div class="list-inner-head flex">
-                                    <h5 class="">Acapellas (32)</h5>
+                                    <h5 class="">Acapellas<span class="list-no">(32)</span> </h5>
                                 </div>
                             </div>
                             
@@ -82,24 +82,24 @@
                                 </div>
 
                                 <ul>
-                                    <li>Drum and Bass 162-174 BPM (31)</li>
-                                    <li>Drum and Bass 174 -180 BPM (32)</li>
-                                    <li>EDM 123-128 BPM (30)</li>
-                                    <li>EDM 128-160 BPM (31)</li>
+                                    <li>Drum and Bass 162-174 BPM <span class="list-no">(31)</span></li>
+                                    <li>Drum and Bass 174 -180 BPM <span class="list-no">(32)</span></li>
+                                    <li>EDM 123-128 BPM <span class="list-no">(30)</span></li>
+                                    <li>EDM 128-160 BPM <span class="list-no">(31)</span></li>
                                     <li class="li-active flex-between">
-                                        Electro 120-126 BPM (26)
+                                        <div>Electro 120-126 BPM <span class="list-no">(26)</span></div>
                                         <i class="fa-solid fa-wave-square"></i>
                                     </li>
-                                    <li>Electro 120-128 BPM (28)</li>
-                                    <li>Funky / Disco (16)</li>
-                                    <li>Garage 120-126 BPM (55)</li>
-                                    <li>Garage 127-130 BPM (37)</li>
-                                    <li>Garage 130+ BPM (46)</li>
-                                    <li>Garage / Grime / Bassline (30)</li>
-                                    <li>House 108 -124 BPM (55)</li>
-                                    <li>House 124 & 125 BPM (50)</li>
-                                    <li>House 125 & 126 BPM (48)</li>
-                                    <li>House 126 - 128 BPM (49)</li>
+                                    <li>Electro 120-128 BPM <span class="list-no">(28)</span></li>
+                                    <li>Funky / Disco <span class="list-no">(16)</span></li>
+                                    <li>Garage 120-126 BPM <span class="list-no">(55)</span></li>
+                                    <li>Garage 127-130 BPM <span class="list-no">(37)</span></li>
+                                    <li>Garage 130+ BPM <span class="list-no">(46)</span></li>
+                                    <li>Garage / Grime / Bassline <span class="list-no">(30)</span></li>
+                                    <li>House 108 -124 BPM <span class="list-no">(55)</span></li>
+                                    <li>House 124 & 125 BPM <span class="list-no">(50)</span></li>
+                                    <li>House 125 & 126 BPM <span class="list-no">(48)</span></li>
+                                    <li>House 126 - 128 BPM <span class="list-no">(49)</span></li>
                                 </ul>
                             </div>
                             
@@ -134,13 +134,15 @@
                                     <button><i class="fa-solid fa-shuffle"></i></button>
                                 </div>
 
-                                <div>
+                                <div class="flex cb-right">
                                     <button><i class="fa-solid fa-info"></i></button>
                                     <button><i class="fa-regular fa-circle-xmark"></i></button>
-                                    <select name="" id="">
-                                        <option disabled value="Default">Default</option>
-                                        <option value="Default">Default</option>
-                                    </select>
+                                    <div class="custom-select">
+                                        <select name="" id="">
+                                            <option disabled value="Default">Default</option>
+                                            <option value="Default">Default</option>
+                                        </select>
+                                    </div>
                                     <button><i class="fa-solid fa-caret-left"></i></button>
                                     <button>4</button>
                                     <button><i class="fa-solid fa-caret-right"></i></button>
@@ -242,14 +244,16 @@
                 <div class="cues-select-outer">
                     <div class="cues-select flex">
                         <div class="cue-select-container">
-                            <select name="" id="">
-                                <option value="CUE1">Cues</option>
-                                <option value="CUE1">CUE1</option>
-                                <option value="CUE1">CUE1</option>
-                                <option value="CUE1">CUE1</option>
-                                <option value="CUE1">CUE1</option>
-                                <option value="CUE1">CUE1</option>
-                            </select>
+                            <div class="cue-select">
+                                <select name="" id="">
+                                    <option value="CUE1">Cues</option>
+                                    <option value="CUE1">CUE1</option>
+                                    <option value="CUE1">CUE1</option>
+                                    <option value="CUE1">CUE1</option>
+                                    <option value="CUE1">CUE1</option>
+                                    <option value="CUE1">CUE1</option>
+                                </select>
+                            </div>
                         </div>
                         
 
@@ -302,8 +306,13 @@
                         <table class="music-table">
                             <thead>
                               <tr>
-                                <th class="table-checkbox"><input type="checkbox" name="" id="" class="head-check"></th>
-                                <th class="table-arrow flex-center"># <i class="fa-solid fa-chevron-up"></i></th>
+                                <th class="table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <th class="table-arrow"><div class="flex-center"># <i class="fa-solid fa-chevron-up"></i></div> </th>
                                 <th class="table-art">Art</th>
                                 <th class="table-added">Added</th>
                                 <th class="table-title">Title</th>
@@ -322,7 +331,12 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
                                 <td class="table-arrow">1</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -341,7 +355,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">2</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -360,7 +378,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">3</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -379,7 +401,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">4</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -398,7 +424,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">5</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -417,7 +447,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">6</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -436,7 +470,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">7</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -455,7 +493,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">8</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -474,7 +516,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">9</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -493,7 +539,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">10</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -512,7 +562,11 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">11</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
@@ -531,8 +585,81 @@
                               </tr>
 
                               <tr>
-                                <td class=" table-checkbox"><i class="fa-solid fa-circle"></i><input type="checkbox" class="check"></td>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
                                 <td class="table-arrow">12</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
+                                <td class="table-arrow">13</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
+                                <td class="table-arrow">14</td>
+                                <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
+                                <td class="table-added">18/10/2025</td>
+                                <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
+                                <td class="table-artist">ACRAZ, CID</td>
+                                <td class="table-album">Do It Do It Jump</td>
+                                <td class="rating-stars table-rating">★★★☆☆</td>
+                                <td class="table-genre">Dance</td>
+                                <td class="table-kind">MP3</td>
+                                <td class="table-time">2:42</td>
+                                <td class="table-track">1</td>
+                                <td class="table-year">2021</td>
+                                <td class="table-bpm">126.00</td>
+                                <td class="table-comments"></td>
+                                <td class="table-key"></td>
+                              </tr>
+
+                              <tr>
+                                <td class=" table-checkbox">
+                                    <label class="container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label></td>
+                                <td class="table-arrow">15</td>
                                 <td class="table-art"><img src="/api/placeholder/30/30" alt="Album Art" class="album-art"></td>
                                 <td class="table-added">18/10/2025</td>
                                 <td class="table-title">Do It Do It Jump (Death Row Remix)</td>
