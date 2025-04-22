@@ -155,11 +155,11 @@ button, select, input[type="checkbox"]{
 /* WebKit */
 .tab-input input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1rem;
+    width: 1rem;
     background: var(--white);
     cursor: pointer;
-    margin-top: -6px; /* Centers the thumb on the track */
+    margin-top: -4.3px; /* Centers the thumb on the track */
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
     border-radius: 0; /* Make it square */
     border: none; /* Remove default borders */
@@ -167,8 +167,8 @@ button, select, input[type="checkbox"]{
 
 /* Firefox */
 .tab-input input[type="range"]::-moz-range-thumb {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1rem;
+    width: 1rem;
     background: var(--white);
     cursor: pointer;
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
@@ -178,8 +178,8 @@ button, select, input[type="checkbox"]{
 
 /* Microsoft browsers */
 .tab-input input[type="range"]::-ms-thumb {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1rem;
+    width: 1rem;
     background: var(--white);
     cursor: pointer;
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
@@ -301,25 +301,40 @@ button, select, input[type="checkbox"]{
 
 
 
-/* Fsidebar scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-}
+/* Universal scrollbar styling - newer standard approach */
+* {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--darker-gray) var(--gray);
+  }
   
-::-webkit-scrollbar-track {
+  /* WebKit browsers (Chrome, Safari, Opera) */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
     background: var(--gray);
     border-radius: 10px;
-}
+  }
   
-::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     background: var(--darker-gray);
     border-radius: 10px;
     border: 3px solid var(--gray);
-}
+  }
   
-::-webkit-scrollbar-thumb:hover {
-    background: var(--darker-gray);
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--darker-gray) !important;
+  }
+  
+  /* For MS Edge/IE - use standard scrollbar properties */
+  html {
+    scrollbar-face-color: var(--darker-gray);
+    scrollbar-track-color: var(--gray);
+    scrollbar-arrow-color: var(--darker-gray);
+    scrollbar-shadow-color: var(--darker-gray);
+  }
 
 /* main page */
 .main-body{
