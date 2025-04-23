@@ -261,7 +261,7 @@ button, select, input[type="checkbox"]{
     color:var(--off-white-light);
 }
 .list-inner{
-    max-height: calc(100vh - 14rem);
+    max-height: calc(100vh - 13.9rem);
     overflow-y: auto;
 }
 .list-inner-head.lih-active{
@@ -288,7 +288,7 @@ button, select, input[type="checkbox"]{
     font-size: .875rem;
 }
 .play-head{
-    max-height: calc(100vh - 11.29rem);
+    max-height: calc(100vh - 11rem);
     height: 100%;
     overflow-y: auto;
 }
@@ -389,11 +389,12 @@ button, select, input[type="checkbox"]{
 .music-info h4{
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: .2rem;
+    margin-bottom: .1rem;
 }
 .music-info h5{
     font-size: .875rem;
     font-weight: 600;
+    font-style: italic;
 }
 .control-btns{
     justify-self: flex-end;
@@ -753,11 +754,11 @@ button, select, input[type="checkbox"]{
 .music-table th:nth-child(1), .music-table th:nth-child(2){
     border-right: none;
 }  
-tbody td {
+.music-table tbody td {
     padding: 8px 7px;
 }
 .music-table td:nth-child(3) {
-    padding:0 8px 0 0;
+    padding:0 !important;
 }
 .music-table tr:nth-child(even) {
     background-color: var(--dark-gray);
@@ -773,14 +774,11 @@ td .fa-circle{
     color: var(--green);
     margin-right: .2rem;
     position: absolute;
-    left: .2rem;
+    left: .15rem;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
 }
-.table-checkbox input[type='checkbox']{
-    opacity: 0.5;
-    border: 1px solid var(--white);
-}
+
 
 
 
@@ -809,7 +807,7 @@ td .fa-circle{
   .checkmark {
     position: absolute;
     top: 0;
-    left: 0;
+    left: .2rem;
     height: 1rem;
     width: 1rem;
     background-color:transparent;
@@ -866,9 +864,7 @@ td .fa-circle{
     text-overflow: ellipsis;
     white-space:nowrap;
 }
-.table-checkbox input{
-    margin-left: .2rem;
-}
+
 .table-checkbox, .table-arrow, .table-key{
     width: 2rem;
     text-align: center;
@@ -896,14 +892,16 @@ td .fa-circle{
     min-width: 5rem;
     max-width: 5rem;
 }
-.table-kind, .table-time, .table-year, .table-bpm{
+.table-kind, .table-time, .table-track, .table-year, .table-bpm{
     min-width: 3rem;
     max-width: 3rem;
+    
 }
-.table-track{
-    min-width: 4rem;
-    max-width: 4rem;
+
+tbody .table-kind, tbody .table-time, tbody .table-track, tbody .table-year, tbody .table-bpm{
+    padding-left: 1rem !important;
 }
+
 
 table {
   display: flex;
